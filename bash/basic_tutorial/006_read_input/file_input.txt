@@ -1,0 +1,1 @@
+A simple string content from a file_input.txt

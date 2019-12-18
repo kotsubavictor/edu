@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "\$0 - script name = $0"
+echo "\$1 - n-th arg = $1"
+echo "\$2 - n-th arg = $2"
+echo "\$3 - n-th arg = $3"
+echo "\$4 - n-th arg = $4"
+echo "\$5 - n-th arg = $5"
+echo "\$@ - all arguments expanded as \"\$1\" \"\$2\" \"\$..\" \"\$n\" (array) = $@"
+echo "\$* - all arguments expanded as one string \"\$1c\$...c\$nc\" (string, c - default separator) = $*"
+echo "\$# - arguments count = $#"
