@@ -1,0 +1,42 @@
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%X{uuid} %t %d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="sl4jAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="sl4j.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%X{uuid} %t %d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="julAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="jul.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%X{uuid} %t %d{yyyy-MM-dd HH:mm:ss} %-5p %c:%L - %m%n" />
+        </layout>
+    </appender>
+
+    <logger name="koviiv.slf4j.package1">
+        <appender-ref ref="sl4jAppender"></appender-ref>
+    </logger>
+
+    <logger name="koviiv.slf4j.package2">
+        <appender-ref ref="sl4jAppender"></appender-ref>
+    </logger>
+
+    <logger name="koviiv.jul.package1">
+        <appender-ref ref="julAppender"></appender-ref>
+    </logger>
+
+    <root>
+        <level value="debug"></level>
+        <appender-ref ref="console"></appender-ref>
+    </root>
+
+</log4j:configuration>
