@@ -1,0 +1,25 @@
+{
+  "name": "resources",
+  "version": "1.0.0",
+  "service": {
+    "name": "jackson"
+  },
+  "dependencies":
+  [
+    {
+    "groupId": "g1",
+    "artifactId": "a1",
+    "version": "1"
+    },
+    {
+      "groupId": "g2",
+      "artifactId": "a2",
+      "version": "2"
+    },
+    {
+      "groupId": "g3",
+      "artifactId": "a3",
+      "version": "3"
+    }
+  ]
+}
